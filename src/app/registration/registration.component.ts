@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from '../@interfaces/player';
 
 @Component({
   selector: 'app-registration',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  public players = [
+  public players : Player[] = [
     {
       lastname:"",
       firstname:"",
@@ -54,7 +55,7 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  registrationPlayers(players : any) {
+  registrationPlayers(players : Player[]) {
     console.log(players)
   }
 }

@@ -11,8 +11,8 @@
         </tr>
         <tr *ngFor="let player of players; let i = index">
             <td>{{ i+1 }}</td>
-            <td><input type="text" name="firstname" id="firstname{{ i }}" [(ngModel)]="player.firstname"/></td>
             <td><input type="text" name="lastname" id="lastname{{ i }}" [(ngModel)]="player.lastname"/></td>
+            <td><input type="text" name="firstname" id="firstname{{ i }}" [(ngModel)]="player.firstname"/></td>
             <td><input type="text" name="license" id="license{{ i }}" [(ngModel)]="player.license"/></td>
         </tr>
     </table>
