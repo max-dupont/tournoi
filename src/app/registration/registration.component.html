@@ -9,54 +9,12 @@
             <th>Prénom</th>
             <th>Licence</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td><input type="text" autofocus></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
+        <tr *ngFor="let player of players; let i = index">
+            <td>{{ i+1 }}</td>
+            <td><input type="text" name="firstname" id="firstname{{ i }}" [(ngModel)]="player.firstname"/></td>
+            <td><input type="text" name="lastname" id="lastname{{ i }}" [(ngModel)]="player.lastname"/></td>
+            <td><input type="text" name="license" id="license{{ i }}" [(ngModel)]="player.license"/></td>
         </tr>
     </table>
-    <button>Valider</button>
+    <button type="submit" (click)="registrationPlayers(players)">Valider</button>
 </div>
