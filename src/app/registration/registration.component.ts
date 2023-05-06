@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../@interfaces/player';
 import { PlayerService } from '../@services/player.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -19,7 +20,10 @@ export class RegistrationComponent implements OnInit {
     { lastname:"", firstname:"", license:"" },
     { lastname:"", firstname:"", license:"" }
   ];
-  constructor(private playersService: PlayerService) {}
+  constructor(
+    private playersService: PlayerService,
+    private router: Router  
+  ) {}
 
   ngOnInit(): void {
   }
@@ -35,6 +39,6 @@ export class RegistrationComponent implements OnInit {
           )
       }
     })
-    console.log(players)
+    this.router.navigate(['/games'])
   }
 }
