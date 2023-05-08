@@ -11,6 +11,12 @@ input[type=text] {
     border-bottom: 2px solid darkred;
     background-color: transparent;
     margin-bottom: 2px;
+    /* transition: all 1s ease-in-out; */
+}
+input:focus-visible {
+    border: none;
+    outline-width: 0;
+    border-bottom: 2px solid darkred;
 }
 
 /* button */
