@@ -1,1 +1,28 @@
-<p>games works!</p>
+<div class="one">
+    <h1>Liste des matchs</h1>
+</div>
+<div class="center">
+    <table>
+        <tr>
+            <th>Tour</th>
+            <th>Match</th>
+            <th>Joueur 1</th>
+            <th>Joueur 2</th>
+            <th>Vainqueur</th>
+        </tr>
+        <tr *ngFor ="let game of games">
+            <td>{{ game.tower }}</td>
+            <td>{{ game.number }}</td>
+            <td class="tab-padding">{{ game.first_player_name }}</td>
+            <td class="tab-padding">{{ game.second_player_name }}</td>
+            <td class="tab-padding">
+                <div class="flex">
+                    <span>{{ game.first_player_name }}</span> <input type="radio" id="winner"> <br>
+                </div>
+                <div class="flex">
+                    <span>{{ game.second_player_name }}</span> <input type="radio" id="winner">
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
