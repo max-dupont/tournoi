@@ -23,4 +23,8 @@ export class GamesComponent implements OnInit {
     )
   }
 
+  updateGame(game : Game) {
+    console.log(game)
+  }
+
 }

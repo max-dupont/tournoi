@@ -17,10 +17,10 @@
             <td class="tab-padding">{{ game.second_player_name }}</td>
             <td class="tab-padding">
                 <div class="flex">
-                    <span>{{ game.first_player_name }}</span> <input type="radio" id="winner"> <br>
+                    <span>{{ game.first_player_name }}</span> <input type="radio" name="{{ game.number }}" value="game.first_player" (click)="updateGame(game)" > <br>
                 </div>
                 <div class="flex">
-                    <span>{{ game.second_player_name }}</span> <input type="radio" id="winner">
+                    <span>{{ game.second_player_name }}</span> <input type="radio" name="{{ game.number }}" value="game.second_player" (click)="updateGame(game)" >
                 </div>
             </td>
         </tr>
