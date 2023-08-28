@@ -52,6 +52,26 @@ export class RegistrationComponent implements OnInit {
           console.log(success);
         }
       )
+    };
+    for (let i = 1; i <= players.length/2; i++) {
+      this.gamesService.addGame({
+        tower:2,
+        number: i
+      }).toPromise().then(
+        (success) => {
+          console.log(success);
+        }
+      )
+    };
+    for (let i = 1; i <= players.length/2; i++) {
+      this.gamesService.addGame({
+        tower:3,
+        number: i
+      }).toPromise().then(
+        (success) => {
+          console.log(success);
+        }
+      )
     }
     this.router.navigate(['/games'])
   }

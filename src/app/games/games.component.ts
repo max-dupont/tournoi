@@ -23,14 +23,14 @@ export class GamesComponent implements OnInit {
     )
   }
 
-  updateGame(game : Game, winner : number) {
+  updateGame(game : Game, winner? : number) {
     game.winner=winner
     this.gamesService.updateGame(game).toPromise().then(
       success => {
         console.log(success)
       }
     )
-    // add new game * 2
+    // update game * 2
   }
 
 }
