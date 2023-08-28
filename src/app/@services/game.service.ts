@@ -21,6 +21,9 @@ export class GameService {
   addGame(game: Game) {
     return this.http.post<Game[]>(this.gamesUrl, game, this.httpOptions);
   }
+  updateGame(game: Game) {
+    return this.http.put<Game[]>(this.gamesUrl, game, this.httpOptions);
+  }
   getGames(): Observable<Game[]> {
     return this.http.get<Game[]>(this.gamesUrl, this.httpOptions);
   }
